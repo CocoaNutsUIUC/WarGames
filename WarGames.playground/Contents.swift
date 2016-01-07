@@ -1,14 +1,19 @@
-//: Playground - noun: a place where people can play
+// The completed code is available on GitHub: https://github.com/jloloew/WarGames
+// Copyright 2016 CocoaNuts
 
-import UIKit
+// It's okay if you don't understand everything here. In fact, I'd be impressed if you do.
+// In a playground, code is executed as you write it, and the result of running each line
+// appears on the right side of the window.
 
-
+import Foundation
 
 /// A character in the story.
 class Character {
 	var name: String
 	var currentlySaying: String? {
-		didSet { // This didSet gets called each time currentlySaying is changed.
+		// This didSet gets called each time currentlySaying is changed.
+		didSet {
+			// This double question mark thing means "if currentlySaying is nil, replace it with the thing after the ??"
 			print(currentlySaying ?? "")
 		}
 	}
@@ -24,9 +29,11 @@ class Character {
 	}
 }
 
+// Let's create our characters.
 var david = Character(name: "David Lightman")
 var wopr = Character(name: "WOPR")
 
+// And so begins our tale...
 david.talkTo(wopr)
 wopr.currentlySaying = "Would you like to play a game?"
 
@@ -73,7 +80,7 @@ struct Country {
 	}
 }
 
-// set up for the game
+// Set up for the game
 var ussr = Country(name: "Russia", cityNames: ["Moscow", "St. Petersburg", "Volgograd"])
 ussr.leader = david
 var usa = Country(name: "United States", cityNames: ["Seattle", "Chicago", "Washington", "New York"])
