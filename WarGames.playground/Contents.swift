@@ -2,6 +2,8 @@
 
 import UIKit
 
+
+
 /// A character in the story.
 class Character {
 	var name: String
@@ -71,7 +73,10 @@ struct Country {
 	}
 }
 
-// allow our existing players to take command of a country
-extension Character {
-	var country: Country?
-}
+// set up for the game
+var ussr = Country(name: "Russia", cityNames: ["Moscow", "St. Petersburg", "Volgograd"])
+ussr.leader = david
+var usa = Country(name: "United States", cityNames: ["Seattle", "Chicago", "Washington", "New York"])
+usa.leader = wopr
+
+// The rest is up to you...
